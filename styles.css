@@ -1,0 +1,221 @@
+body {
+  background-color: white;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+header {
+  position: fixed;
+  top: 25px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: white;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  align-content: stretch;
+  justify-content: flex-start;
+  border: none !important;
+}
+header.hidden {
+  transition: opacity 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+header.active {
+  transition: opacity 0.4s ease;
+  opacity: 1;
+}
+nav {
+  background-color: #111;
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  padding: 0 10px;
+}
+#nav-left, #brand, #nav-right {
+  display: flex;
+  color: #f0f0f0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 10pt;
+}
+.gray-box {
+  background-color: #1f1f1f;
+  border: 1px solid #444;
+  padding: 10px 14px;
+  margin: 11px 6px;
+  border-radius: 4px;
+  transition: 0.3s ease-in-out;
+}
+.gray-box:hover {
+  cursor: pointer;
+  background-color: #111;
+  border: 1px solid white;
+}
+.sections i, .sign-in i {
+  margin-left: 5px;
+}
+.blue-box {
+  background-color: #1955a5;
+  border: 1px solid #3d73d5;
+  padding: 10px 14px;
+  margin: 11px 6px;
+  border-radius: 4px;
+  transition: 0.3s ease-in-out;
+}
+.blue-box:hover {
+  background-color: #3d73d5;
+  cursor: pointer;
+}
+.container {
+  width: 45vw;
+  margin: 100px auto;
+}
+h1, h5 {
+  text-align: center;
+}
+#author-date {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15px 0;
+  color: #666;
+}
+.author a:hover {
+  text-decoration: underline;
+}
+.gothic {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 12pt;
+  font-weight: 300;
+}
+.gothic b, .gothic b a {
+  color: #1955a5;
+  font-weight: bold;
+}
+.didot {
+  font-family: 'Didot', sans-serif;
+  font-size: 38pt;
+  margin-top: 20px;
+  margin-bottom: 0;
+  color: #2a2a2a;
+  word-spacing: -0.02em;
+}
+p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 14pt;
+  line-height: 28pt;
+  color: #111;
+  margin-bottom: 20px;
+}
+p a {
+  color: #2c6cb4;
+  border-bottom: 1px solid #d5d5d5;
+}
+p a:hover {
+  text-decoration: none;
+}
+#subhead {
+  font-weight: bold;
+  font-style: italic;
+}
+.account-mobile, .search-mobile {
+  font-size: 1pt;
+  opacity: 0;
+}
+#logo {
+  height: 70%; 
+  margin-top: 5%; 
+  margin-left: 29%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 75vw;
+  }
+}
+@media only screen and (max-width: 850px) {
+  /* For mobile phones: */
+  .account-mobile, .search-mobile {
+    font-size: 16pt;
+    opacity: 1;
+    margin: 18px;
+  }
+  .account-mobile:hover, .search-mobile:hover {
+    cursor: pointer;
+  }
+  .gray-box, .blue-box {
+    opacity: 0;
+  }
+  .container {
+    width: 90vw;
+  }
+  #logo {
+    margin-left: 0;
+  }
+  .account-mobile {
+    margin-left: -90px;
+  }
+  .didot {
+    font-size: 30pt;
+  }
+  .gothic {
+    font-size: 10pt;
+  }
+  p {
+    font-size: 12pt;
+    line-height: 24pt;
+  }
+}
+@media only screen and (max-width: 550px) {
+  /* For mobile phones: */
+  .account-mobile, .search-mobile {
+    font-size: 16pt;
+    opacity: 1;
+    margin: 18px;
+  }
+  .account-mobile:hover, .search-mobile:hover {
+    cursor: pointer;
+  }
+  .gray-box, .blue-box {
+    opacity: 0;
+  }
+  .container {
+    width: 90vw;
+  }
+  #logo {
+    margin-left: -35%;
+  }
+  .account-mobile {
+    margin-left: -90px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  /* For mobile phones: */
+  .account-mobile, .search-mobile {
+    font-size: 16pt;
+    opacity: 1;
+    margin: 18px;
+  }
+  .account-mobile:hover, .search-mobile:hover {
+    cursor: pointer;
+  }
+  .gray-box, .blue-box {
+    opacity: 0;
+  }
+  .container {
+    width: 90vw;
+  }
+  #logo {
+    margin-left: -68%;
+  }
+  .account-mobile {
+    margin-left: -200px;
+    transform: translateX(-30px);
+  }
+}
