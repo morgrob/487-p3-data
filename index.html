@@ -23,7 +23,7 @@
         <div id="nav-left">
           <h3 class="search-mobile"><i class="fas fa-search"></i></h3>
           <h4 class="gray-box search"><i class="fas fa-search"></i></h4>
-          <h4 class="gray-box sections">Sections <i class="fas fa-bars"></i></h4>
+          <h4 class="gray-box sections button">Sections <i class="fas fa-bars"></i></h4>
         </div>
         <div id="brand">
           <a href="https://www.washingtonpost.com/"><img id="logo" src="https://v.fastcdn.co/u/4dfd7141/52377180-0-wapo-white-ddid-3x.png" alt="The Washington Post Logo"></a>
@@ -35,6 +35,32 @@
         </div>
       </nav>
     </header>
+    <!-- <div id="nav-content" tabindex="0">
+      <ul>
+          <li><h4 class="blue-box">Get one year for $40</h4></li>
+          <li>
+            <h4>washingtonpost.com</h4>
+            <p>Home Page</p>
+          </li>
+          <li><a href="#">Politics <i class="fas fa-chevron-right"></i></a></li>
+          <li><a href="#">Opinions <i class="fas fa-chevron-right"></i></a></li>
+          <li><a href="#">Investigations <i class="fas fa-chevron-right"></i></a></li>
+          <li><a href="#">Tech <i class="fas fa-chevron-right"></i></a></li>
+          <li><a href="#">World <i class="fas fa-chevron-right"></i></a></li>
+          <li><a href="#">D.C., Md. & Va. <i class="fas fa-chevron-right"></i></a></li>
+          <li><a href="#">Sports <i class="fas fa-chevron-right"></i></a></li>
+          <li><a href="#">Race & Reckoning</a></li>
+          <li><a href="#">Arts & Entertainment <i class="fas fa-chevron-right"></i></a></li>
+          <li><a href="#">Business <i class="fas fa-chevron-right"></i></a></li>
+          <li><a href="#">Climate & Environment</a></li>
+          <li><a href="#">Climate Solutions</a></li>
+          <li><a href="#">Coronavirus <i class="fas fa-chevron-right"></i></a></li>
+          <li><a href="#">Education <i class="fas fa-chevron-right"></i></a></li>
+          <li><a href="#">Food <i class="fas fa-chevron-right"></i></a></li>
+          <li><a href="#">Health <i class="fas fa-chevron-right"></i></a></li>
+          <li><a href="#">History <i class="fas fa-chevron-right"></i></a></li>
+      </ul>
+</div> -->
 
     <main class="container">
           <h5 class="gothic category"><a href="https://www.washingtonpost.com/national/?itid=nb_national"><b>National</b></a></h5>
@@ -47,9 +73,23 @@
             Referring to murders of women as “femicides” can help stop the erasure of the ongoing murders of women and the larger social 
             patterns connecting them.
           </p>
-          <h3 style="text-align: center;">2020 Female Missing Person Entry by Race</h3>
-          <div id="missing-demographics"></div>
-          <p style="text-align: center; font-size: 8pt; line-height: 8pt; color: #888;">*Race White - Includes Hispanic</p>
+          
+          <div class="chart">
+          <h3 class="chart-title">2020 All Violent Crime Offender vs. Victim Sex - <a href="https://crime-data-explorer.fr.cloud.gov/pages/explorer/crime/crime-trend">FBI Crime Data Explorer</a></h3>
+
+          <div class="chart-container">
+            <div id="offender">
+              <h4 class="chart-title">Offender Sex</h4>
+              <div id="offender-sex"></div>
+            </div>
+            <div id="victim">
+              <h4 class="chart-title">Victim Sex</h4>
+              <div id="victim-sex"></div>
+            </div>
+          </div>
+          </div>
+
+
           <p>
             Within the last few weeks, the high-profile murders of <a href="https://msmagazine.com/2021/09/29/gabby-petito-race-disability-coercive-
             control-missing-white-girl-syndrome-domestic-violence/">Gabby Petito</a> and Miya Marcano have triggered extensive media coverage and social 
@@ -135,6 +175,7 @@
             call femicide what it is and create laws against it.
           </p>
           <div class="placeholder">Full Table w/ Pages</div>
+          <h3 class="chart-title">View the original article on Ms. Magazine <a href="https://msmagazine.com/2021/10/18/femicide-murder-women-gender-killing-miya-marcano-gabby-petito/">here</a>.</h3>
     </main>
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <script src="js/c3.min.js"></script>
