@@ -7,6 +7,7 @@ a {
 }
 header {
   position: fixed;
+  z-index: 100;
   top: 25px;
   left: 0;
   width: 100%;
@@ -73,7 +74,7 @@ nav {
   cursor: pointer;
 }
 .container {
-  width: 45vw;
+  width: 50vw;
   margin: 100px auto;
 }
 h1, h5 {
@@ -141,7 +142,7 @@ p a:hover {
 .chart-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 #offender, #victim {
@@ -155,7 +156,19 @@ p a:hover {
 .chart {
   margin: 30px 0;
 }
-
+.table {
+  margin: 20px 0;
+}
+.footnote {
+  text-align: center;
+  font-size: 9pt;
+  line-height: 9pt;
+}
+.spacer {
+  width: 1px;
+  height: 200px;
+  background-color: #111;
+}
 
 /* MEDIA QUERIES */
 

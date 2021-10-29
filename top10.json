@@ -1,0 +1,52 @@
+[
+  {
+    "LAST": "Hester",
+    "FIRST": "Lee Arthur",
+    "STATE": "Illinois",
+    "COUNTY": "Cook",
+    "CONVICTED": 1961,
+    "EXONERATED": 2019,
+    "FACTORS": "False Confession, False or Misleading Forensic Evidence, Perjury or False Accusation, Official Misconduct",
+    "YEARS IN PRISON": 58
+  },
+  {
+    "LAST": "Gatling",
+    "FIRST": "Paul",
+    "STATE": "New York",
+    "COUNTY": "Kings",
+    "CONVICTED": 1964,
+    "EXONERATED": 2016,
+    "FACTORS": "Mistaken Witness ID, Official Misconduct",
+    "YEARS IN PRISON": 52
+  },
+  {
+    "LAST": "Butler",
+    "FIRST": "Dennis",
+    "STATE": "District of Columbia",
+    "COUNTY": "",
+    "CONVICTED": 1971,
+    "EXONERATED": 2020,
+    "FACTORS": "False or Misleading Forensic Evidence, Perjury or False Accusation, Official Misconduct",
+    "YEARS IN PRISON": 49
+  },
+  {
+    "LAST": "Mazza",
+    "FIRST": "Anthony",
+    "STATE": "Massachusetts",
+    "COUNTY": "Suffolk",
+    "CONVICTED": 1973,
+    "EXONERATED": 2021,
+    "FACTORS": "Mistaken Witness ID, Perjury or False Accusation, Official Misconduct",
+    "YEARS IN PRISON": 48
+  },
+  {
+    "LAST": "Lomax",
+    "FIRST": "Walter",
+    "STATE": "Maryland",
+    "COUNTY": "Baltimore City",
+    "CONVICTED": 1968,
+    "EXONERATED": 2014,
+    "FACTORS": "Mistaken Witness ID, Official Misconduct, Inadequate Legal Defense",
+    "YEARS IN PRISON": 46
+  }
+]
