@@ -14,6 +14,7 @@ window.onscroll = function() {
 $(document).ready( function () {
   console.log("ready!");
   $('#exonerations').DataTable( {
+    responsive: true,
     ajax: {
       url: '/data/exonerations.json',
       dataSrc: ''
@@ -33,6 +34,7 @@ $(document).ready( function () {
 $(document).ready( function () {
   console.log("ready!");
   $('#top10').DataTable( {
+    responsive: true,
     "paging":   false,
     "ordering": false,
     "info":     false,
@@ -276,10 +278,6 @@ var chart = c3.generate({
         'U.S. Inmates': '#6266a5'
     },
   },
-//   size: {
-//     height: 250,
-//     width: 435
-// },
   axis: {
     x: {
         type: 'category',
@@ -288,10 +286,8 @@ var chart = c3.generate({
 },
   bar: {
       width: {
-          ratio: 0.5 // this makes bar width 50% of length between ticks
+          ratio: 0.5 
       }
-      // or
-      //width: 100 // this makes bar width 100px
   }
 });
 
@@ -308,10 +304,6 @@ var chart = c3.generate({
         'U.S. Inmates': '#b9bef7'
     },
   },
-//   size: {
-//     height: 250,
-//     width: 435
-// },
   axis: {
     x: {
         type: 'category',
@@ -320,10 +312,9 @@ var chart = c3.generate({
 },
   bar: {
       width: {
-          ratio: 0.5 // this makes bar width 50% of length between ticks
+          ratio: 0.5 
       }
-      // or
-      //width: 100 // this makes bar width 100px
+
   }
 });
 
