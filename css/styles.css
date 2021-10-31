@@ -12,7 +12,7 @@ header {
   left: 0;
   width: 100%;
   height: 60px;
-  background: white;
+  background: transparent !important;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -74,8 +74,8 @@ nav {
   cursor: pointer;
 }
 .container {
-  width: 50vw;
-  margin: 100px auto;
+  width: 55vw;
+  margin: 45px auto;
 }
 h1, h5 {
   text-align: center;
@@ -84,7 +84,7 @@ h1, h5 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0px;
+  margin-bottom: -15px;
   color: #666;
 }
 .author a:hover, h3 a:hover {
@@ -101,9 +101,8 @@ h1, h5 {
 }
 .didot {
   font-family: 'Didot', sans-serif;
-  font-size: 38pt;
-  margin-top: 15px;
-  margin-bottom: 0;
+  font-size: 40pt;
+  margin: 0;
   color: #2a2a2a;
   word-spacing: -0.02em;
 }
@@ -114,7 +113,16 @@ p {
   color: #111;
   margin-bottom: 20px;
 }
-p a {
+.chart-text {
+  font-size: 12pt;
+  line-height: 16pt;
+}
+#feature-table {
+  border-top: 1px solid #d5d5d5;
+  padding: 20px 0 10px 0;
+  margin: 20px 0 0 0;
+}
+p a, li a {
   color: #2c6cb4;
   border-bottom: 1px solid #d5d5d5;
 }
@@ -123,7 +131,7 @@ p a:hover {
 }
 #subhead {
   font-weight: bold;
-  font-style: italic;
+  /* font-style: italic; */
 }
 .account-mobile, .search-mobile {
   font-size: 1pt;
@@ -144,6 +152,33 @@ p a:hover {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  border-top: 1px solid rgb(201, 201, 201);
+  border-bottom: 1px solid rgb(201, 201, 201);
+  padding: 20px 0;
+  margin: 20px 0;
+
+}
+.chart-container2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* border-bottom: 1px solid rgb(201, 201, 201); */
+  /* padding: 0 0 20px 0;
+  margin: 0 0 20px 0; */
+}
+#demo-text {
+  border-bottom: 1px solid rgb(201, 201, 201);
+  padding: 0 0 20px 0;
+  margin: 0 0 20px 0;
+}
+.line-container {
+  border-top: 1px solid rgb(201, 201, 201);
+  padding: 20px 0 0 0;
+  margin: 20px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 #offender, #victim {
   width: 100%;
@@ -164,10 +199,126 @@ p a:hover {
   font-size: 9pt;
   line-height: 9pt;
 }
-.spacer {
+.title-contain {
+  width: 50%;
+  align-self: flex-start;
+}
+.title-contain2 {
+  width: 100%;
+  align-self: flex-start;
+}
+
+
+.pie-spacer {
   width: 1px;
-  height: 200px;
-  background-color: #111;
+  height: 570px;
+  background-color: rgb(201, 201, 201);
+  align-self: center;
+  margin: 0 20px;
+}
+.bar-spacer {
+  width: 1px;
+  height: 380px;
+  background-color: rgb(201, 201, 201);
+  align-self: center;
+  margin: 0 20px;
+}
+#line-spacer {
+  width: 1px;
+  height: 530px;
+  background-color: rgb(201, 201, 201);
+  align-self: center;
+  margin: 0 20px;
+}
+#pic-grid {
+  width: 100vw;
+  height: 400px;
+  background-color: lightblue;
+}
+.charts {
+  width: 70%;
+}
+.chart-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#crimes {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid rgb(201, 201, 201);
+  padding: 20px 0 0 0;
+  margin: 20px 0 0 0;
+}
+#sentence {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid rgb(201, 201, 201);
+  padding: 20px 0 0 0;
+  margin: 20px 0 0 0;
+}
+#crimes-text, #sentence-text {
+  width: 28%;
+}
+#chartdiv {
+  width: 100%;
+  height: 500px
+}
+#map {
+  border-bottom: 1px solid rgb(201, 201, 201);
+  padding: 20px 0;
+  margin: 0 0 20px 0;
+}
+.image-grid {
+  margin-top: 60px;
+}
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: rgb(241, 241, 241);
+  color: #111;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.4s;
+  font-size: 12pt;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 10px 0 0 0;
+}
+.end {
+  border-bottom: 1px solid rgb(201, 201, 201);
+  padding: 0 0 40px 0;
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: rgb(224, 224, 224);
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: rgb(241, 241, 241);
+  max-height: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 18pt;
+}
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: rgb(95, 95, 95);
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
 /* MEDIA QUERIES */

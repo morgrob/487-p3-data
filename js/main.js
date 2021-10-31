@@ -15,7 +15,7 @@ $(document).ready( function () {
   console.log("ready!");
   $('#exonerations').DataTable( {
     ajax: {
-      url: '/exonerations.json',
+      url: '/data/exonerations.json',
       dataSrc: ''
     },
     columns: [
@@ -38,7 +38,7 @@ $(document).ready( function () {
     "info":     false,
     "searching": false,
     ajax: {
-      url: '/top10.json',
+      url: '/data/top10.json',
       dataSrc: ''
     },
     columns: [
@@ -68,9 +68,9 @@ var chart = c3.generate({
       ],
       type: 'line',
         colors: {
-            'Total Prison Population': '#003AFA',
-            'Probation': '#009FFF',
-            'Parole': '#8CC7FA'
+            'Total Prison Population': '#40447d',
+            'Probation': '#6266a5',
+            'Parole': '#8b90cc'
         },
   },
   point: {
@@ -86,25 +86,50 @@ var chart = c3.generate({
   }
 });
 
-
 var chart = c3.generate({
-  bindto: '#exo-demo-pie',
+  bindto: '#pop-demo-pie',
   data: {
       columns: [
-          ['White', 33],
-          ['Black', 62],
-          ['Hispanic', 9],
-          ['Other/Unknown', 3],
+          ['White', 61],
+          ['Black', 12.3],
+          ['Hispanic', 18],
+          ['Other/Unknown', 8.7],
       ],
       type : 'pie',
       onclick: function (d, i) { console.log("onclick", d, i); },
       onmouseover: function (d, i) { console.log("onmouseover", d, i); },
       onmouseout: function (d, i) { console.log("onmouseout", d, i); },
       colors: {
-        'White': '#003AFA',
-        'Black': '#0179FF',
-        'Hispanic': '#009FFF',
-        'Other/Unknown': '#8CC7FA'
+        'White': '#40447d',
+        'Black': '#6266a5',
+        'Hispanic': '#8b90cc',
+        'Other/Unknown': '#b9bef7'
+    },
+    color: function (color, d) {
+        // d will be 'id' when called for legends
+        return d.id && d.id === 'data3' ? d3.rgb(color).darker(d.value / 150) : color;
+    }
+}
+});
+
+var chart = c3.generate({
+  bindto: '#exo-demo-pie',
+  data: {
+      columns: [
+          ['White', 1029],
+          ['Black', 1428],
+          ['Hispanic', 350],
+          ['Other/Unknown', 75],
+      ],
+      type : 'pie',
+      onclick: function (d, i) { console.log("onclick", d, i); },
+      onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+      onmouseout: function (d, i) { console.log("onmouseout", d, i); },
+      colors: {
+        'White': '#40447d',
+        'Black': '#6266a5',
+        'Hispanic': '#8b90cc',
+        'Other/Unknown': '#b9bef7'
     },
     color: function (color, d) {
         // d will be 'id' when called for legends
@@ -117,20 +142,119 @@ var chart = c3.generate({
   bindto: '#all-demo-pie',
   data: {
       columns: [
-          ['White', 29],
-          ['Black', 34],
-          ['Hispanic', 24],
-          ['Other/Unknown', 13],
+          ['White', 33.5],
+          ['Black', 38.1],
+          ['Hispanic', 24.4],
+          ['Other/Unknown', 4],
       ],
       type : 'pie',
       onclick: function (d, i) { console.log("onclick", d, i); },
       onmouseover: function (d, i) { console.log("onmouseover", d, i); },
       onmouseout: function (d, i) { console.log("onmouseout", d, i); },
       colors: {
-        'White': '#003AFA',
-        'Black': '#0179FF',
-        'Hispanic': '#009FFF',
-        'Other/Unknown': '#8CC7FA'
+        'White': '#40447d',
+        'Black': '#6266a5',
+        'Hispanic': '#8b90cc',
+        'Other/Unknown': '#b9bef7'
+    },
+    color: function (color, d) {
+        // d will be 'id' when called for legends
+        return d.id && d.id === 'data3' ? d3.rgb(color).darker(d.value / 150) : color;
+    }
+}
+});
+
+var chart = c3.generate({
+  bindto: '#exo-age-pie',
+  data: {
+      columns: [
+          ['< 18', 250],
+          ['18-30', 1610],
+          ['31-40', 599],
+          ['41-50', 292],
+          ['> 50', 116],
+      ],
+      type : 'pie',
+      onclick: function (d, i) { console.log("onclick", d, i); },
+      onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+      onmouseout: function (d, i) { console.log("onmouseout", d, i); },
+      colors: {
+        '< 18': '#282b58',
+        '18-30': '#40447d',
+        '31-40': '#6266a5',
+        '41-50': '#8b90cc',
+        '> 50': '#b9bef7'
+    },
+    color: function (color, d) {
+        // d will be 'id' when called for legends
+        return d.id && d.id === 'data3' ? d3.rgb(color).darker(d.value / 150) : color;
+    }
+}
+});
+
+var chart = c3.generate({
+  bindto: '#all-age-pie',
+  data: {
+      columns: [
+          ['< 18', 8],
+          ['18-30', 27314],
+          ['31-40', 53898],
+          ['41-50', 43761],
+          ['> 50', 30678],
+      ],
+      type : 'pie',
+      onclick: function (d, i) { console.log("onclick", d, i); },
+      onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+      onmouseout: function (d, i) { console.log("onmouseout", d, i); },
+      colors: {
+        '< 18': '#282b58',
+        '18-30': '#40447d',
+        '31-40': '#6266a5',
+        '41-50': '#8b90cc',
+        '> 50': '#b9bef7'
+    },
+    color: function (color, d) {
+        // d will be 'id' when called for legends
+        return d.id && d.id === 'data3' ? d3.rgb(color).darker(d.value / 150) : color;
+    }
+}
+});
+
+var chart = c3.generate({
+  bindto: '#all-sex-pie',
+  data: {
+      columns: [
+          ['Male', 144785],
+          ['Female', 10874]
+      ],
+      type : 'pie',
+      onclick: function (d, i) { console.log("onclick", d, i); },
+      onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+      onmouseout: function (d, i) { console.log("onmouseout", d, i); },
+      colors: {
+        'Male': '#40447d',
+        'Female': '#8b90cc'
+    },
+    color: function (color, d) {
+        // d will be 'id' when called for legends
+        return d.id && d.id === 'data3' ? d3.rgb(color).darker(d.value / 150) : color;
+    }
+}
+});
+var chart = c3.generate({
+  bindto: '#exo-sex-pie',
+  data: {
+      columns: [
+          ['Male', 2633],
+          ['Female', 250]
+      ],
+      type : 'pie',
+      onclick: function (d, i) { console.log("onclick", d, i); },
+      onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+      onmouseout: function (d, i) { console.log("onmouseout", d, i); },
+      colors: {
+        'Male': '#40447d',
+        'Female': '#8b90cc'
     },
     color: function (color, d) {
         // d will be 'id' when called for legends
@@ -143,26 +267,24 @@ var chart = c3.generate({
   bindto: '#crime-bars',
   data: {
       columns: [
-          ['Crime', 57, 16, 7, 5, 4, 10],
-
+          ['Exonerees', 43.1, 13.9, 1.7, 6.3, 23.4, 0.1, 2, 9.5],
+          ['U.S. Inmates', 3.1, 46.1, 5.2, 3.1, 11.2, 4.5, 20.7, 6.1]
       ],
       type: 'bar',
       colors: {
-        'Crime': '#009FFF',
+        'Exonerees': '#282b58',
+        'U.S. Inmates': '#6266a5'
     },
   },
-  size: {
-    height: 250,
-    width: 435
-},
+//   size: {
+//     height: 250,
+//     width: 435
+// },
   axis: {
     x: {
         type: 'category',
-        categories: ['Murder', 'Drug Possession/Sale', 'Fraud', 'Robbery', 'Sexual Assault', 'Other']
+        categories: ['Murder', 'Drug Offense', 'Fraud', 'Robbery', 'Sex Offense', 'Immigration', 'Weapons', 'Other']
     }
-},
-legend: {
-  show: false
 },
   bar: {
       width: {
@@ -177,25 +299,24 @@ var chart = c3.generate({
   bindto: '#sentence-bars',
   data: {
       columns: [
-          ['Sentence', 5, 7, 20, 5, 14, 14, 16, 24, 3]
+          ['Exonerees', 10.9, 18.5, 4.6, 26, 39.8],
+          ['U.S. Inmates', 1.8, 45.4, 35.2, 14.9, 2.7]
       ],
       type: 'bar',
       colors: {
-        'Sentence': '#8CC7FA',
+        'Exonerees': '#8b90cc',
+        'U.S. Inmates': '#b9bef7'
     },
   },
-  size: {
-    height: 250,
-    width: 435
-},
+//   size: {
+//     height: 250,
+//     width: 435
+// },
   axis: {
     x: {
         type: 'category',
-        categories: ['Not Sentenced', 'Probation', '0-10 years', '11-20 years', '21-30 years', '> 30 years', 'Life', 'Life without Parole', 'Death']
+        categories: ['> 1 year', '1-10 years', '11-20 years', '> 20 years', 'Life or Death']
     }
-},
-legend: {
-  show: false
 },
   bar: {
       width: {
@@ -205,51 +326,108 @@ legend: {
       //width: 100 // this makes bar width 100px
   }
 });
-  
-// var chart = c3.generate({
-//   bindto: '#offender-sex',
-//   data: {
-//       columns: [
-//           ['Male', 473159],
-//           ['Female', 108190],
-//           ['Unknown', 36708],
-//       ],
-//       type : 'pie',
-//       onclick: function (d, i) { console.log("onclick", d, i); },
-//       onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-//       onmouseout: function (d, i) { console.log("onmouseout", d, i); },
-//       colors: {
-//         'Male': '#FAB4D6',
-//         'Female': '#FF8EC6',
-//         'Unknown': '#BF5583'
-//     },
-//     color: function (color, d) {
-//         // d will be 'id' when called for legends
-//         return d.id && d.id === 'data3' ? d3.rgb(color).darker(d.value / 150) : color;
-//     }
-// }
-// });
 
-// var chart = c3.generate({
-//   bindto: '#victim-sex',
-//   data: {
-//       columns: [
-//           ['Male', 335813],
-//           ['Female', 316885],
-//           ['Unknown', 3145],
-//       ],
-//       type : 'pie',
-//       onclick: function (d, i) { console.log("onclick", d, i); },
-//       onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-//       onmouseout: function (d, i) { console.log("onmouseout", d, i); },
-//       colors: {
-//         'Male': '#FAB4D6',
-//         'Female': '#FF8EC6',
-//         'Unknown': '#BF5583'
-//     },
-//     color: function (color, d) {
-//         // d will be 'id' when called for legends
-//         return d.id && d.id === 'data3' ? d3.rgb(color).darker(d.value / 150) : color;
-//     }
-// }
-// });
+var chart = c3.generate({
+  bindto: '#inmate-line',
+  data: {
+      x: 'x',
+      columns: [
+          ['x', '1989-01-01', '1990-01-01', '1991-01-01', '1992-01-01', '1993-01-01', '1994-01-01', '1995-01-01', '1996-01-01', '1997-01-01', '1998-01-01', '1999-01-01', '2000-01-01', '2001-01-01', '2002-01-01', '2003-01-01', '2004-01-01', '2005-01-01', '2006-01-01', '2007-01-01', '2008-01-01', '2009-01-01', '2010-01-01', '2011-01-01', '2012-01-01', '2013-01-01', '2014-01-01', '2015-01-01', '2016-01-01', '2017-01-01', '2018-01-01', '2019-01-01', '2020-01-01', '2021-01-01'],
+          ['Inmate Population', 57762, 64936, 71508, 79678, 88565, 95162, 100958, 105443, 112289, 122316, 133689, 145125, 156572, 163436, 172499, 179895, 187394, 192584, 200020, 201668, 208759, 210227, 217768, 218687, 219298, 214149, 205723, 192170, 185617, 181698, 177214, 155562, 155826]
+      ],
+      types: {
+          'Inmate Population': 'area-spline'
+      },
+      colors: {
+        'Inmate Population': '#8b90cc',
+      },
+  },
+  legend: {
+    show: false
+  },
+  point: {
+    show: false
+  },
+  axis: {
+    x: {
+        type: 'timeseries',
+        tick: {
+            // this also works for non timeseries data
+            format: '%Y',
+            count: 5
+        }
+    }
+}
+});
+
+var chart = c3.generate({
+  bindto: '#exo-line',
+  data: {
+      x: 'x',
+      columns: [
+          ['x', '1989-01-01', '1990-01-01', '1991-01-01', '1992-01-01', '1993-01-01', '1994-01-01', '1995-01-01', '1996-01-01', '1997-01-01', '1998-01-01', '1999-01-01', '2000-01-01', '2001-01-01', '2002-01-01', '2003-01-01', '2004-01-01', '2005-01-01', '2006-01-01', '2007-01-01', '2008-01-01', '2009-01-01', '2010-01-01', '2011-01-01', '2012-01-01', '2013-01-01', '2014-01-01', '2015-01-01', '2016-01-01', '2017-01-01', '2018-01-01', '2019-01-01', '2020-01-01', '2021-01-01'],
+          ['Exonerations', 24, 31, 41, 40, 41, 34, 41, 53, 53, 39, 55, 106, 97, 67, 83, 58, 66, 79, 77, 69, 98, 83, 75, 119, 103, 155, 172, 182, 172, 174, 153, 135, 108]
+      ],
+      types: {
+          'Exonerations': 'area-spline'
+      },
+      colors: {
+        'Exonerations': '#8b90cc',
+      },
+  },
+  legend: {
+    show: false
+  },
+  point: {
+    show: false
+  },
+  axis: {
+    x: {
+        type: 'timeseries',
+        tick: {
+            // this also works for non timeseries data
+            format: '%Y',
+            count: 5
+        }
+    }
+}
+});
+
+$(function() {
+			
+  $( '#ri-grid' ).gridrotator( {
+    rows		: 4,
+    columns		: 25,
+    animType	: 'fadeInOut',
+    animSpeed	: 300,
+    interval	: 200,
+    step		: 3,
+    w320		: {
+      rows	: 3,
+      columns	: 4
+    },
+    w240		: {
+      rows	: 3,
+      columns	: 4
+    }
+  } );
+
+});
+
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+
+
