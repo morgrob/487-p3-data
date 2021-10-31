@@ -16,7 +16,8 @@ $(document).ready( function () {
   $('#exonerations').DataTable( {
     responsive: true,
     ajax: {
-      url: '../data/exonerations.json',
+      // url: '../data/exonerations.json',
+      url: '/data/exonerations.json',
       dataSrc: ''
     },
     columns: [
@@ -40,7 +41,8 @@ $(document).ready( function () {
     "info":     false,
     "searching": false,
     ajax: {
-      url: '../data/top10.json',
+      // url: '../data/top10.json',
+      url: '/data/top10.json',
       dataSrc: ''
     },
     columns: [
