@@ -95,6 +95,9 @@ h1, h5 {
   font-size: 12pt;
   font-weight: 300;
 }
+.table {
+  font-size: 10pt;
+}
 .gothic b, .gothic b a, h3 a {
   color: #1955a5;
   font-weight: bold;
@@ -410,7 +413,8 @@ p a:hover {
     margin-bottom: 0;
   }
   .table {
-    width: 50%;
+    margin-left: -10px;
+    font-size: 10pt;
   }
 }
 @media only screen and (max-width: 550px) {
