@@ -66,14 +66,14 @@ $.getJSON("./data/prisonpop.json", function(json) {
     data: {
       json: json,
       keys: {
-        x: "YEAR",
-        value: ["TOTAL"]
+        x: "Year",
+        value: ["Prison Population"]
       },
       types: {
-          'TOTAL': 'area-spline'
+          'Prison Population': 'area-spline'
       },
       colors: {
-        'TOTAL': '#8b90cc',
+        'Prison Population': '#8b90cc',
       }
     },
     legend: {
@@ -85,37 +85,31 @@ $.getJSON("./data/prisonpop.json", function(json) {
   });
 });
 
-c3.generate({
-  bindto: '#exo-line',
-  data: {
-      x: 'x',
-      columns: [
-          ['x', '1989-01-01', '1990-01-01', '1991-01-01', '1992-01-01', '1993-01-01', '1994-01-01', '1995-01-01', '1996-01-01', '1997-01-01', '1998-01-01', '1999-01-01', '2000-01-01', '2001-01-01', '2002-01-01', '2003-01-01', '2004-01-01', '2005-01-01', '2006-01-01', '2007-01-01', '2008-01-01', '2009-01-01', '2010-01-01', '2011-01-01', '2012-01-01', '2013-01-01', '2014-01-01', '2015-01-01', '2016-01-01', '2017-01-01', '2018-01-01', '2019-01-01', '2020-01-01', '2021-01-01'],
-          ['Exonerations', 24, 31, 41, 40, 41, 34, 41, 53, 53, 39, 55, 106, 97, 67, 83, 58, 66, 79, 77, 69, 98, 83, 75, 119, 103, 155, 172, 182, 172, 174, 153, 135, 108]
-      ],
+// Exonerations Over Time Line Graph
+$.getJSON("./data/exo-time.json", function(json) {
+  console.log(json);
+  c3.generate({
+    bindto: '#exo-line',
+    data: {
+      json: json,
+      keys: {
+        x: "Year",
+        value: ["Exonerations"]
+      },
       types: {
           'Exonerations': 'area-spline'
       },
       colors: {
         'Exonerations': '#8b90cc',
-      },
-  },
-  legend: {
-    show: false
-  },
-  point: {
-    show: false
-  },
-  axis: {
-    x: {
-        type: 'timeseries',
-        tick: {
-            // this also works for non timeseries data
-            format: '%Y',
-            count: 5
-        }
+      }
+    },
+    legend: {
+      show: false
+    },
+    point: {
+      show: false
     }
-}
+  });
 });
 
 // Offenses Bar Graph
