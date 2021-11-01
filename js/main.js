@@ -51,7 +51,7 @@ $(document).ready( function () {
       {data: 'LAST'},
       {data: 'FIRST'},
       {data: 'STATE'},
-      {data: 'COUNTY'},
+      // {data: 'COUNTY'},
       {data: 'YEARS IN PRISON'},
       {data: 'FACTORS'},
     ]
@@ -362,8 +362,6 @@ $(document).ready( function () {
       {data: 'LAST'},
       {data: 'FIRST'},
       {data: 'STATE'},
-      {data: 'COUNTY'},
-      {data: 'CONVICTED'},
       {data: 'EXONERATED'},
       {data: 'FACTORS'},
     ]
